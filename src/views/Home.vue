@@ -1,8 +1,8 @@
 <template>
   <el-container>
-    <el-aside width="200px">
+    <div style="display: inline-block">
       <common-aside></common-aside>
-    </el-aside>
+    </div>
     <el-container>
       <el-header>
         <header-bar></header-bar>

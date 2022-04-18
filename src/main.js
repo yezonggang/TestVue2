@@ -12,6 +12,7 @@ Vue.config.productionTip = false
 Vue.use(ElementUI)
 Vue.prototype.$http = http
 import '../src/mock/index'
+import './assets/less/index.less'
 
 // 导航守卫逻辑
 router.beforeEach((to, from, next) => {
