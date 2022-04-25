@@ -1,6 +1,9 @@
 import Mock from 'mockjs'
 export default {
-  getMenu: () => {
+  getMenu: config => {
+    console.log(config)
+    const { username, password } = JSON.parse(config.body)
+    console.log(JSON.parse(config.body))
     return {
       code: 20000,
       data: {

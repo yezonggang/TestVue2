@@ -11,9 +11,10 @@ import http from 'axios'
 Vue.config.productionTip = false
 Vue.use(ElementUI)
 Vue.prototype.$http = http
-import '../src/mock/index'
+//import '../src/mock/index'
 import './assets/less/index.less'
-
+// 根据config下的配置文件类型，判断是否使用mock数据
+process.env.MOCK && require('../src/mock/index')
 // 导航守卫逻辑
 router.beforeEach((to, from, next) => {
   store.commit('getToken')

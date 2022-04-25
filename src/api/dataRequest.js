@@ -6,11 +6,3 @@ export function getData() {
     method: 'get'
   })
 }
-
-export function getUser(params) {
-  return request({
-    url: '/user/getUser',
-    method: 'get',
-    params
-  })
-}

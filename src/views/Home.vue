@@ -1,12 +1,11 @@
 <template>
-  <el-container>
-    <div style="display: inline-block">
-      <common-aside></common-aside>
-    </div>
+  <el-container style="height: 100%">
+    <common-aside width="auto"></common-aside>
     <el-container>
       <el-header>
         <header-bar></header-bar>
       </el-header>
+      <common-tag></common-tag>
       <el-main>
         <router-view />
       </el-main>
@@ -16,12 +15,15 @@
 
 <script>
 import commonAside from '../components/SideBar'
-import headerBar from '../components/HeaderBar.vue'
+import headerBar from '../components/HeaderBar'
+import CommonTag from '../components/CommonTag'
+
 export default {
   name: 'Home',
   components: {
     commonAside,
-    headerBar
+    headerBar,
+    CommonTag
   },
   data() {
     return {}

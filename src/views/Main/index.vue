@@ -15,7 +15,7 @@
         </div>
       </el-card>
     </el-card>
-    <el-card style="margin-top:20px; height:420px;">
+    <el-card style="margin-top:20px; height:400px;">
         <el-table :data="tableData">
             <el-table-column v-for="(val,key) in tableLabel"
             :key="key"
@@ -28,7 +28,7 @@
     </el-card>   
      </el-col>
 
-    <el-col sytle="margin-top:20px " :span="16">
+    <el-col sytle="margin-top:10px " :span="16">
       <div class="num">
         <el-card
           class="cardall"
@@ -231,7 +231,7 @@ export default {
 }
 .cardall {
   display: inherit;
-  margin: 20px 0px;
+  margin: 5px 0px;
   background: color #444;
   width: 150px;
 }

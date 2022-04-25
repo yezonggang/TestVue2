@@ -8,7 +8,7 @@
     @close="handleClose"
     :collapse="isCollapse"
   >
-    <h3>{{ isCollapse ? '后台' : '后台管理系统' }}</h3>
+    <h3>{{ isCollapse ? 'Monitor' : 'Monitor 管理系统' }}</h3>
     <el-menu-item
       @click="clickMenu(item)"
       v-for="item in noChildren"
@@ -20,7 +20,11 @@
       <span slot="title">{{ item.label }}</span>
     </el-menu-item>
 
-    <el-submenu v-for="item in hasChildren" :index="item.path" :key="item.path">
+    <el-submenu
+      v-for="item in hasChildren"
+      :index="item.path + ''"
+      :key="item.path"
+    >
       <template slot="title">
         <i :class="'el-icon-' + item.icon"></i>
         <span slot="title">{{ item.label }}</span>
@@ -30,7 +34,7 @@
         v-for="(subItem, subIndex) in item.children"
         :key="subItem.path"
       >
-        <el-menu-item @click="clickMenu(subItem)" :index="subIndex">{{
+        <el-menu-item @click="clickMenu(subItem)" :index="subIndex + ''">{{
           subItem.label
         }}</el-menu-item>
       </el-menu-item-group>
