@@ -1,67 +1,69 @@
 <template>
   <el-row class="home" :gutter="20">
-    <el-col :span="8" style="margin-top: 5px ">
-      <el-card shadow="hover" style="height:350px ">
+    <el-col :span="8" style="margin-top: 5px">
+      <el-card shadow="hover">
         <div class="user">
-          <img :src="userImg"/>
+          <img :src="userImg" />
           <div class="userinfo">
-            <p class="name">yezonggang</p>
+            <p class="name">Admin</p>
             <p class="acess">超级管理员</p>
           </div>
         </div>
         <div class="login-info">
-          <p>本次登录的时间:<span>2022-04-15</span></p>
-          <p>本次登录的地点:<span>郑州</span></p>
+          <p>上次登陆的时间:<span>2021-5-20</span></p>
+          <p>上次登陆的地点:<span>厦门</span></p>
         </div>
       </el-card>
-    </el-card>
-    <el-card style="margin-top:20px; height:400px;">
+      <el-card style="margin-top: 20px; height: 400px">
         <el-table :data="tableData">
-            <el-table-column v-for="(val,key) in tableLabel"
+          <el-table-column
+            v-for="(val, key) in tableLabel"
             :key="key"
             :prop="key"
             :label="val"
-            >
-            </el-table-column>
+          >
+          </el-table-column>
         </el-table>
-
-    </el-card>   
-     </el-col>
-
-    <el-col sytle="margin-top:10px " :span="16">
+      </el-card>
+    </el-col>
+    <el-col sytle="margin-top:20px" :span="16">
       <div class="num">
         <el-card
-          class="cardall"
           v-for="item in countData"
           :key="item.name"
           :body-style="{ padding: 0 }"
         >
-          <span><i
+          <i
             class="icon"
             :class="`el-icon-${item.icon}`"
             :style="{ background: item.color }"
-          ></i></span>
-          <span class="detail">
-            <p class="num-detail" style="margin-top: 10px">{{ item.value }}</p>
+          ></i>
+          <div class="detail">
+            <p class="num" style="margin-left: 80px">{{ item.value }}</p>
             <p class="txt">{{ item.name }}</p>
-          </span>
+          </div>
         </el-card>
       </div>
-      <el-card style="height: 330px; border:10px">
+      <el-card style="height: 180px">
         <!-- 折线图  -->
-        <echart :chartData="echartData.order" style="height: 330px" />
+        <!-- <div style="height:200px" ref="echarts" ></div> -->
+        <echart :chartData="echartData.order" style="height: 200px" />
       </el-card>
-      <div class="graphclass">
-        <el-card class="sub" style="height: 330px">
+
+      <div class="graph">
+        <el-card style="height: 200px">
           <!-- 柱状图 -->
-          <echart :chartData="echartData.user" style="height: 330px" />
+          <!-- <div style="height:200px" ref="userEcharts"></div> -->
+          <echart :chartData="echartData.user" style="height: 200px" />
         </el-card>
-        <el-card class="sub" style="height: 330px ">
+
+        <el-card style="height: 200px">
           <!-- 饼图 -->
+          <!-- <div style="height:150px" ref="videoEcharts"></div> -->
           <echart
             :chartData="echartData.video"
             :isAxisChart="false"
-            style="height: 330px"
+            style="height: 150px"
           />
         </el-card>
       </div>
@@ -223,25 +225,3 @@ export default {
   }
 }
 </script>
-
-<style lang="less" scoped>
-.num {
-  display: flex;
-  justify-content: space-between;
-}
-.cardall {
-  display: inherit;
-  margin: 5px 0px;
-  background: color #444;
-  width: 150px;
-}
-.graphclass {
-  display: flex;
-  flex-grow: 0;
-  height: 200px;
-  border: 10px;
-}
-.sub {
-  flex: 1;
-}
-</style>
