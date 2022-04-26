@@ -133,6 +133,7 @@ export default {
       ],
       config: {
         page: 1,
+        size: 20,
         total: 30,
         loading: true
       }

@@ -1,6 +1,6 @@
 <template>
   <div class="common-table">
-    <el-table :data="tableData" height="700" stripe>
+    <el-table :data="tableData" height="660" stripe>
       <el-table-column
         show-overflow-tooltip
         v-for="item in tableLabel"
@@ -27,7 +27,7 @@
       :total="config.total"
       :current-page.sync="config.page"
       @current-change="changePage"
-      page-size=int("20")
+      :page-size="config.size"
     >
     </el-pagination>
   </div>
@@ -58,14 +58,16 @@ export default {
 </script>
 <style lang="less" scoped>
 .common-table {
-  height: calc(100%-62px);
+  height: calc(100% - 62px);
   // 小bug 窗口大小有问题
   background-color: #fff;
-  position: relative;
+  //position: relative;
   .pager {
-    position: absolute;
+    //position: absolute;
     bottom: 0;
     right: 20px;
+    text-align: right;
+    padding-top: 15px;
   }
 }
 </style>
