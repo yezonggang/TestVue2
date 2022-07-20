@@ -2,7 +2,7 @@
   <el-container style="height: 100%">
     <common-aside width="auto"></common-aside>
     <el-container>
-      <el-header>
+      <el-header style="padding: 0">
         <header-bar></header-bar>
       </el-header>
       <common-tag></common-tag>

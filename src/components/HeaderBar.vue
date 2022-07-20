@@ -61,9 +61,10 @@ export default {
 header {
   display: flex;
   height: 100%;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
-  background-color: black;
+  background-color: #333;
 }
 .l-content {
   display: flex;

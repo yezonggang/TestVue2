@@ -78,9 +78,6 @@ export default {
           this.$message.warning(res.data.message)
         }
       })
-      // const token =Mock.random.guid()
-      // this.$store.commit('setToken',token)
-      // this.$router.push({name:'home'})
     }
   }
 }
