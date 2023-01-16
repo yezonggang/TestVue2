@@ -14,9 +14,9 @@
 </template>
 
 <script>
-import commonAside from '../components/SideBar'
-import headerBar from '../components/HeaderBar'
-import CommonTag from '../components/CommonTag'
+import commonAside from '../../components/SideBar'
+import headerBar from '../../components/HeaderBar'
+import CommonTag from '../../components/CommonTag'
 
 export default {
   name: 'Home',
