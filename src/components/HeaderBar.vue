@@ -1,5 +1,5 @@
 <template>
-  <header class="headerBar">
+  <div class="headerBar">
     <div class="l-content">
       <el-button @click="handMenu" plain icon="el-icon-menu" size="mini">
       </el-button>
@@ -25,7 +25,7 @@
         </el-dropdown-menu>
       </el-dropdown>
     </div>
-  </header>
+  </div>
 </template>
 
 <script>
@@ -58,13 +58,13 @@ export default {
 
 </script>
 <style lang="less" scoped>
-header {
+.headerBar {
   display: flex;
   height: 100%;
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
+  background-color: #545c64;
 }
 .l-content {
   display: flex;
