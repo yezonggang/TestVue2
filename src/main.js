@@ -32,9 +32,9 @@ new Vue({
   store,
   el: '#app',
   router,
-  created() {
-    store.commit('addMenu', router)
-  },
+  // created() {
+  //   store.commit('addMenu', router)
+  // },
   components: { App },
   template: '<App/>'
 })
